@@ -1,3 +1,10 @@
+#
+#	Module:	bumpme.py
+#
+#	key authentication module to be run on ghost worker machines.
+#
+#	lutefisk	1.13.2018
+#
 from bottle import route, run, template
 
 @route('/hello/<name>')
