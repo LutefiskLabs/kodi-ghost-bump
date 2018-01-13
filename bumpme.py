@@ -8,7 +8,6 @@
 from bottle import route, run, template
 import json
 
-
 config_file = open( 'config.json' )
 config_data = json.load( config_file )
 
@@ -21,4 +20,4 @@ def config_dump():
 def index(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
-run(host='0.0.0.0' , port=8085)
+run(host='0.0.0.0' , port=8085, server="tornado")
