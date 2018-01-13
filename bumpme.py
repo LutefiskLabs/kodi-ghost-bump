@@ -3,7 +3,7 @@
 #
 #	key authentication module to be run on ghost worker machines.
 #
-#	lutefisk	1.13.2018
+#	lutefisk	1.13.2018  accessing with SSH keys
 #
 from bottle import route, run, template
 
