@@ -5,12 +5,17 @@
 #
 #	lutefisk	1.13.2018  accessing with SSH keys
 #
-from bottle import route, run, template
+from bottle import route, run, template, static_file
 import json
 
 config_file = open( 'config.json' )
 config_data = json.load( config_file )
 
+
+
+@route('/static/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='./static')
 
 @route('/dump')
 def config_dump():
