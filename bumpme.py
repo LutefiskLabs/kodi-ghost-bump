@@ -19,7 +19,7 @@ def server_static(filepath):
 
 @route('/dump')
 def config_dump():
-    return template('<b>Config data {{cc}}</b>!', cc=config_data)
+    return template('<b>Config data {{cc}}</b>!', cc=json.dumps( config_data ))
 
 @route('/echo/<name>')
 def index(name):
